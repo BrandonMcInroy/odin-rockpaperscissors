@@ -1,7 +1,11 @@
+const humanScore = 0;
+const computerScore = 0;
+
 function getComputerChoice() {
-  const choices = ["Rock", "Paper", "Scissors"];
-  const choice = choices[Math.floor(Math.random() * choices.length)];
-  return "The computer chose" + " " + choice + ".";
+  const computerChoices = ["Rock", "Paper", "Scissors"];
+  const computerChoice =
+    computerChoices[Math.floor(Math.random() * computerChoices.length)];
+  return "The computer chose" + " " + computerChoice + ".";
 }
 console.log(getComputerChoice());
 
