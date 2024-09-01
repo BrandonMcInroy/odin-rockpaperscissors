@@ -11,12 +11,18 @@ console.log(getComputerChoice());
 
 function getHumanChoice() {
   const humanChoice = prompt("Please choose Rock, Paper or Scissors");
-  return "You chose" + " " + humanChoice + ".";
+  return "You chose" + " " + humanChoice.toLowerCase() + ".";
 }
 
 console.log(getHumanChoice());
 
-function playRound(humanChoice, computerChoice) {}
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === computerChoice) {
+return "It's a tie!"
+  } else if {
+    
+  }
+}
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
