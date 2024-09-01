@@ -28,9 +28,8 @@ function playRound(humanChoice, computerChoice) {
     return "You Lost!";
   }
 }
-console.log(playRound());
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+console.log(playRound(humanSelection, computerSelection));
