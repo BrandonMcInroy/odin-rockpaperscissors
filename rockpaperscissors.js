@@ -19,13 +19,19 @@ function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
     return "It's a tie!";
   } else if (humanChoice === "rock" && computerChoice === "scissors") {
-    return "You Win!  Rock crushes scissors!";
+    return "You Win!  Rock crushes Scissors!";
   } else if (humanChoice === "scissors" && computerChoice === "paper") {
     return "You Win!  Scissors cut through Paper!";
   } else if (humanChoice === "paper" && computerChoice === "rock") {
-    return "You Win!  Paper covers Rock";
+    return "You Win!  Paper covers Rock!";
+  } else if (humanChoice === "scissor" && computerChoice === "rock") {
+    return "You Lost! Scissors gets crushed by Rock!";
+  } else if (humanChoice === "paper" && computerChoice === "scissors") {
+    return "You Lost!  Paper gets cut by Scissors!";
+  } else if (humanChoice === "rock" && computerChoice === "paper") {
+    return "You Lost!  Rock gets covered by Paper!";
   } else {
-    return "You Lost!";
+    return "You lost because you entered an incorrect value.";
   }
 }
 
