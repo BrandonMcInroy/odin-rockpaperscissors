@@ -13,7 +13,7 @@ function getComputerChoice() {
     computerChoices[Math.floor(Math.random() * computerChoices.length)];
   return computerChoice.toLowerCase();
 }
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
@@ -28,9 +28,9 @@ function playRound(humanChoice, computerChoice) {
     return "You Lost!";
   }
 }
+console.log(playRound());
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-const result = playRound(humanSelection, computerSelection);
-console.log(result);
+playRound(humanSelection, computerSelection);
