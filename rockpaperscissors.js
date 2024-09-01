@@ -5,7 +5,7 @@ function getHumanChoice() {
   const humanChoice = prompt("Please choose Rock, Paper or Scissors");
   return "You chose" + " " + humanChoice.toLowerCase() + ".";
 }
-console.log(getHumanChoice());
+// console.log(getHumanChoice());
 
 function getComputerChoice() {
   const computerChoices = ["Rock", "Paper", "Scissors"];
@@ -13,13 +13,13 @@ function getComputerChoice() {
     computerChoices[Math.floor(Math.random() * computerChoices.length)];
   return "The computer chose" + " " + computerChoice.toLowerCase() + ".";
 }
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
     return "It's a tie!";
   } else if (humanChoice === "rock" && computerChoice === "scissors") {
-    return "You Win!  Rock crushes !";
+    return "You Win!  Rock crushes scissors!";
   } else if (humanChoice === "scissors" && computerChoice === "paper") {
     return "You Win!  Scissors cut through Paper!";
   } else if (humanChoice === "paper" && computerChoice === "rock") {
@@ -29,8 +29,8 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
 const result = playRound(humanSelection, computerSelection);
 console.log(result);
