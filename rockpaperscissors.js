@@ -3,7 +3,7 @@ const computerScore = 0;
 
 function getHumanChoice() {
   const humanChoice = prompt("Please choose Rock, Paper or Scissors");
-  return "You chose" + " " + humanChoice.toLowerCase() + ".";
+  return humanChoice.toLowerCase();
 }
 // console.log(getHumanChoice());
 
@@ -11,9 +11,9 @@ function getComputerChoice() {
   const computerChoices = ["Rock", "Paper", "Scissors"];
   const computerChoice =
     computerChoices[Math.floor(Math.random() * computerChoices.length)];
-  return "The computer chose" + " " + computerChoice.toLowerCase() + ".";
+  return computerChoice.toLowerCase();
 }
-// console.log(getComputerChoice());
+console.log(getComputerChoice());
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
