@@ -5,7 +5,7 @@ function getComputerChoice() {
   const computerChoices = ["Rock", "Paper", "Scissors"];
   const computerChoice =
     computerChoices[Math.floor(Math.random() * computerChoices.length)];
-  return "The computer chose" + " " + computerChoice + ".";
+  return "The computer chose" + " " + computerChoice.toLowerCase() + ".";
 }
 console.log(getComputerChoice());
 
@@ -18,9 +18,15 @@ console.log(getHumanChoice());
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
-return "It's a tie!"
-  } else if {
-    
+    return "It's a tie!";
+  } else if (
+    (humanChoice === "rock" && computerChoice === "scissors") ||
+    (humanChoice === "scissors" && computerChoice === "paper") ||
+    (humanChoice === "paper" && computerChoice === "rock")
+  ) {
+    return "You Win!";
+  } else {
+    return "You Loose!";
   }
 }
 
