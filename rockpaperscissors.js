@@ -40,28 +40,6 @@ const computerSelection = getComputerChoice();
 function playGame() {
   let humanScore = 0;
   let computerScore = 0;
-
-  for (i = 0; i < 3; i++) {
-    const result = playRound(getHumanChoice(), getComputerChoice());
-    console.log(result);
-    if (result.includes("Win")) {
-      humanScore++;
-      console.log(`computer: ${computerScore} | player: ${humanScore}`);
-    } else if (result.includes("Lose")) {
-      computerScore++;
-      console.log(`computer: ${computerScore} | player: ${humanScore}`);
-    }
-  }
-  console.log(
-    "Final Results: Player: " + humanScore + " Computer: " + computerScore
-  );
-  if (humanScore > computerScore) {
-    console.log("You win the game!");
-  } else if (humanScore < computerScore) {
-    console.log("You lost the game!");
-  } else {
-    console.log("Tie Game!");
-  }
 }
 
 playGame();
