@@ -1,14 +1,16 @@
-const rockbtn = document.getElementById("rockbtn");
-rockbtn.addEventListener("click", playGame);
-const paperbtn = document.getElementById("paperbtn");
-paperbtn.addEventListener("click", playGame);
-const scissorsbtn = document.getElementById("scissorsbtn");
-scissorsbtn.addEventListener("click", playGame);
+const rockbtn = document.querySelector("#rockbtn");
+rockbtn.addEventListener("click", playRound(rock));
 
-// function getHumanChoice() {
-//   return humanChoice.toLowerCase();
-// }
-// console.log(getHumanChoice());
+const paperbtn = document.querySelector("#paperbtn");
+paperbtn.addEventListener("click", playRound);
+
+const scissorsbtn = document.querySelector("#scissorsbtn");
+scissorsbtn.addEventListener("click", playRound);
+
+function getHumanChoice() {
+  return humanChoice.toLowerCase();
+}
+console.log(getHumanChoice());
 
 function getComputerChoice() {
   const computerChoices = ["Rock", "Paper", "Scissors"];
@@ -18,8 +20,8 @@ function getComputerChoice() {
 }
 // console.log(getComputerChoice());
 
-function playRound(rockbtn, paperbtn, scissorsbtn, computerChoice) {
-  if (humanChoice === computerChoice) {
+function playRound() {
+  if (rock || paper || scissors === computerChoice) {
     return "It's a tie!";
   } else if (humanChoice === "rockbtn" && computerChoice === "scissors") {
     return "You Win!  Rock crushes Scissors!";
@@ -38,14 +40,14 @@ function playRound(rockbtn, paperbtn, scissorsbtn, computerChoice) {
   }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
 
 // console.log(playRound(humanSelection, computerSelection));
 
-function playGame() {
-  let humanScore = 0;
-  let computerScore = 0;
-}
+// function playGame() {
+//   let humanScore = 0;
+//   let computerScore = 0;
+// }
 
-playGame();
+// playGame();
