@@ -1,16 +1,11 @@
 const rock = document.getElementById("rock");
-rock.addEventListener("click", () => playRound(rock));
+rock.addEventListener("click", () => playRound({ humanChoice: rock }));
 
-const paper = document.querySelector("#paper");
-paper.addEventListener("click", () => playRound(paper));
+const paper = document.getElementById("paper");
+paper.addEventListener("click", () => playRound({ humanChoice: paper }));
 
-const scissors = document.querySelector("#scissors");
-scissors.addEventListener("click", () => playRound(scissors));
-
-// function getHumanChoice() {
-//   return humanChoice.toLowerCase();
-// }
-// console.log(getHumanChoice());
+const scissors = document.getElementById("scissors");
+scissors.addEventListener("click", () => playRound({ humanChoice: scissors }));
 
 function getComputerChoice() {
   const computerChoices = ["Rock", "Paper", "Scissors"];
@@ -20,36 +15,35 @@ function getComputerChoice() {
 }
 // console.log(getComputerChoice());
 
-function playRound() {
-  if (rock || paper || scissors === computerChoice) {
+function playRound({ humanChoice }) {
+  const computerChoice = getComputerChoice();
+
+  if (humanChoice === computerChoice) {
     return "It's a tie!";
-  } else if (humanChoice === "rockbtn" && computerChoice === "scissors") {
+  } else if (humanChoice === "rock" && computerChoice === "scissors") {
     return "You Win!  Rock crushes Scissors!";
-  } else if (humanChoice === "scissorsbtn" && computerChoice === "paper") {
+  } else if (humanChoice === "scissors" && computerChoice === "paper") {
     return "You Win!  Scissors cut through Paper!";
-  } else if (humanChoice === "paperbtn" && computerChoice === "rock") {
+  } else if (humanChoice === "paper" && computerChoice === "rock") {
     return "You Win!  Paper covers Rock!";
-  } else if (humanChoice === "scissorsbtn" && computerChoice === "rock") {
+  } else if (humanChoice === "scissors" && computerChoice === "rock") {
     return "You Lost! Scissors gets crushed by Rock!";
-  } else if (humanChoice === "paperbtn" && computerChoice === "scissors") {
+  } else if (humanChoice === "paper" && computerChoice === "scissors") {
     return "You Lost!  Paper gets cut by Scissors!";
-  } else if (humanChoice === "rockbtn" && computerChoice === "paper") {
+  } else if (humanChoice === "rock" && computerChoice === "paper") {
     return "You Lost!  Rock gets covered by Paper!";
   } else {
     return "You lost because you entered an incorrect value.";
   }
 }
 
-console.log(playRound());
+// console.log(playRound(humanChoice, computerChoice));
 
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
+function playGame() {
+  let humanScore = 0;
+  let computerScore = 0;
+}
 
-// console.log(playRound(humanSelection, computerSelection));
+playGame();
 
-// function playGame() {
-//   let humanScore = 0;
-//   let computerScore = 0;
-// }
-
-// playGame();
+console.log(playGame());
