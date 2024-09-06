@@ -1,11 +1,11 @@
-const rockbtn = document.querySelector("#rockbtn");
-rockbtn.addEventListener("click", playRound(rock));
+const rock = document.querySelector("#rock");
+rock.addEventListener("click", playRound(rock));
 
-const paperbtn = document.querySelector("#paperbtn");
-paperbtn.addEventListener("click", playRound);
+const paper = document.querySelector("#paper");
+paper.addEventListener("click", playRound(paper));
 
-const scissorsbtn = document.querySelector("#scissorsbtn");
-scissorsbtn.addEventListener("click", playRound);
+const scissors = document.querySelector("#scissors");
+scissors.addEventListener("click", playRound(scissors));
 
 function getHumanChoice() {
   return humanChoice.toLowerCase();
