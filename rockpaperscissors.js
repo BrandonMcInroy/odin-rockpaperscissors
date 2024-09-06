@@ -1,16 +1,16 @@
-const rock = document.querySelector("#rock");
-rock.addEventListener("click", playRound(rock));
+const rock = document.getElementById("rock");
+rock.addEventListener("click", () => playRound(rock));
 
 const paper = document.querySelector("#paper");
-paper.addEventListener("click", playRound(paper));
+paper.addEventListener("click", () => playRound(paper));
 
 const scissors = document.querySelector("#scissors");
-scissors.addEventListener("click", playRound(scissors));
+scissors.addEventListener("click", () => playRound(scissors));
 
-function getHumanChoice() {
-  return humanChoice.toLowerCase();
-}
-console.log(getHumanChoice());
+// function getHumanChoice() {
+//   return humanChoice.toLowerCase();
+// }
+// console.log(getHumanChoice());
 
 function getComputerChoice() {
   const computerChoices = ["Rock", "Paper", "Scissors"];
@@ -39,6 +39,8 @@ function playRound() {
     return "You lost because you entered an incorrect value.";
   }
 }
+
+console.log(playRound());
 
 // const humanSelection = getHumanChoice();
 // const computerSelection = getComputerChoice();
