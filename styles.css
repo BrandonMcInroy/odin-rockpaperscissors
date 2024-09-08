@@ -8,3 +8,8 @@ body {
   align-items: center;
   background: #6482ad;
 }
+
+h1 {
+  font-size: 3.5rem;
+  color: #e2dad6;
+}
