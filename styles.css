@@ -22,7 +22,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: left;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 40px;
 }
 
@@ -40,5 +40,13 @@ h1 {
 }
 
 .display {
+  padding: 5px;
   margin-bottom: 10px;
+  font-weight: 500;
+}
+
+#resetButton {
+  border-radius: 10px;
+  font-size: 2rem;
+  cursor: pointer;
 }
