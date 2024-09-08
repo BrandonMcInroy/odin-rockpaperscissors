@@ -30,8 +30,8 @@ function playRound(playerChoice) {
   } else {
     result = "You lost because you entered an incorrect value.";
   }
-  playerDisplay.textContent = `Player choice: ${playerChoice}`;
-  computerDisplay.textContent = `Computer choice: ${computerChoice}`;
+  playerDisplay.textContent = ` ${playerChoice}`;
+  computerDisplay.textContent = ` ${computerChoice}`;
   resultDisplay.textContent = result;
   gameScore(result);
 }
@@ -44,11 +44,11 @@ document.querySelectorAll(".choice").forEach((button) => {
 function gameScore(result) {
   if (result.includes("Win")) {
     playerScore++;
-    playerScoreDisplay.textContent = `Player score: ${playerScore}`;
+    playerScoreDisplay.textContent = ` ${playerScore}`;
   } else result.includes("Lost");
   {
     computerScore++;
-    computerScorDisplay.textContent = `Computer score: ${computerScore}`;
+    computerScorDisplay.textContent = ` ${computerScore}`;
   }
 
   if (playerScore === 5) {
