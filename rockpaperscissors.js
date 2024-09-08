@@ -7,30 +7,29 @@ const computerScorDisplay = document.getElementById("computerScoreDisplay");
 let playerScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice) {
+function playRound(playerChoice) {
   const computerChoice = choices[Math.floor(Math.random() * 3)];
   let result = "";
 
-  if (humanChoice === computerChoice) {
+  if (playerChoice === computerChoice) {
     return "It's a tie!";
-  } else if (humanChoice === "rock" && computerChoice === "scissors") {
+  } else if (playerChoice === "rock" && computerChoice === "scissors") {
     return "You Win!  Rock crushes Scissors!";
-  } else if (humanChoice === "scissors" && computerChoice === "paper") {
+  } else if (playerChoice === "scissors" && computerChoice === "paper") {
     return "You Win!  Scissors cut through Paper!";
-  } else if (humanChoice === "paper" && computerChoice === "rock") {
+  } else if (playerChoice === "paper" && computerChoice === "rock") {
     return "You Win!  Paper covers Rock!";
-  } else if (humanChoice === "scissors" && computerChoice === "rock") {
+  } else if (playerChoice === "scissors" && computerChoice === "rock") {
     return "You Lost! Scissors gets crushed by Rock!";
-  } else if (humanChoice === "paper" && computerChoice === "scissors") {
+  } else if (playerChoice === "paper" && computerChoice === "scissors") {
     return "You Lost!  Paper gets cut by Scissors!";
-  } else if (humanChoice === "rock" && computerChoice === "paper") {
+  } else if (playerChoice === "rock" && computerChoice === "paper") {
     return "You Lost!  Rock gets covered by Paper!";
   } else {
     return "You lost because you entered an incorrect value.";
   }
 }
-
-console.log(playRound());
+playersole.log(playRound());
 
 // function playGame() {
 //   let humanScore = 0;
