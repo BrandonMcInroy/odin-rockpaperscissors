@@ -44,7 +44,7 @@ span {
   cursor: pointer;
   transition: background-color 0.5s ease;
 }
-.choices button:hover {
+button:hover {
   background-color: #7f92ad;
 }
 
@@ -55,8 +55,9 @@ span {
   color: #6482ad;
 }
 
-#resetButton {
+.resetbtn {
   border-radius: 10px;
   font-size: 2rem;
   cursor: pointer;
+  transition: background-color 0.5s ease;
 }
