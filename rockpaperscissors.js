@@ -5,11 +5,14 @@ const resultDisplay = document.getElementById("resultDisplay");
 const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScorDisplay = document.getElementById("computerScoreDisplay");
 const gameResult = document.getElementById("gameResult");
+let isGameRunning = false;
 let playerScore = 0;
 let computerScore = 0;
 
 function playRound(playerChoice) {
-  // const playerChoice = button.id;
+  if (!isGameRunning) {
+    return;
+  }
   const computerChoice = choices[Math.floor(Math.random() * 3)];
   let result = "";
 
@@ -39,6 +42,10 @@ document.querySelectorAll(".choice").forEach((button) => {
   button.addEventListener("click", () => {
     playRound(button.id);
   });
+  document.getElementById("resetButton").addEventListener("click", () => {
+    isGameRunning = false;
+    resetGame();
+  });
 });
 
 function gameScore(result) {
@@ -62,8 +69,9 @@ function gameScore(result) {
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
-  playerScoreDisplay.textContent = `Player score: ${playerScore}`;
-  computerScorDisplay.textContent = `Computer score: ${computerScore}`;
+  playerScoreDisplay.textContent = ` ${playerScore}`;
+  computerScorDisplay.textContent = ` ${computerScore}`;
   resultDisplay.textContent = "";
   gameResult.textContent = "";
+  isGameRunning = true;
 }
