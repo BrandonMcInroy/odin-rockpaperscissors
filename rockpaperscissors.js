@@ -43,7 +43,8 @@ function playRound(playerChoice) {
 document.querySelectorAll(".choice").forEach((button) => {
   button.addEventListener("click", () => {
     if (!isGameRunning) {
-      return;
+      return (resultDisplay.textContent =
+        "The game is over.  Please click the reset button.");
     }
     playRound(button.id);
   });
