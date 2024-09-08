@@ -77,6 +77,8 @@ function gameScore(result) {
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
+  playerDisplay.textContent = "";
+  computerDisplay.textContent = "";
   playerScoreDisplay.textContent = ` ${playerScore}`;
   computerScorDisplay.textContent = ` ${computerScore}`;
   resultDisplay.textContent = "";
