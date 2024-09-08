@@ -5,7 +5,7 @@ const resultDisplay = document.getElementById("resultDisplay");
 const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScorDisplay = document.getElementById("computerScoreDisplay");
 const gameResult = document.getElementById("gameResult");
-let isGameRunning = false;
+let isGameRunning = true;
 let playerScore = 0;
 let computerScore = 0;
 
@@ -43,7 +43,7 @@ function playRound(playerChoice) {
 document.querySelectorAll(".choice").forEach((button) => {
   button.addEventListener("click", () => {
     if (!isGameRunning) {
-      resetGame();
+      return;
     }
     playRound(button.id);
   });
@@ -60,7 +60,7 @@ function gameScore(result) {
   }
 
   if (playerScore === 5) {
-    gameResult.textContent = `You win the game!`;
+    gameResult.textContent = `You won the game`;
     isGameRunning = false;
   }
   if (computerScore === 5) {
