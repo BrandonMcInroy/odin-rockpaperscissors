@@ -14,6 +14,11 @@ h1 {
   color: #e2dad6;
 }
 
+span {
+  font-weight: 400;
+  color: black;
+}
+
 .container {
   background-color: #f5eded;
   font-size: 2rem;
@@ -43,6 +48,7 @@ h1 {
   padding: 5px;
   margin-bottom: 10px;
   font-weight: 500;
+  color: #6482ad;
 }
 
 #resetButton {
