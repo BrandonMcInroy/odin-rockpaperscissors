@@ -11,23 +11,25 @@
 <body>
 
     <h1>Rock Paper Scissors!</h1>
+    <div class="container">
+        <div class="choices">
+            <button class="choice" id="rock">ROCK</button>
+            <button class="choice" id="paper">PAPER</button>
+            <button class="choice" id="scissors">SCISSORS</button>
+        </div>
 
-    <div class="choices">
-        <button class="choice" id="rock">ROCK</button>
-        <button class="choice" id="paper">PAPER</button>
-        <button class="choice" id="scissors">SCISSORS</button>
+        <div class="playerchoice">Player choice:<span id="playerDisplay"></span></div>
+        <div class="computerchoice">Computer choice:<span id="computerDisplay"></span></div>
+        <div class="result">Round result:<span id="resultDisplay"></span></div>
+
+        <div class="scoreDisplay">Player score:<span id="playerScoreDisplay"></span></div>
+        <div class="scoreDisplay">Computer score:<span id="computerScoreDisplay"></span></div>
+
+        <div class="winLoose">Game result:<span id="gameResult"></span></div>
+
+        <button id="resetButton">Reset Game</button>
     </div>
 
-    <div class="playerchoice">Player choice:<span id="playerDisplay"></span></div>
-    <div class="computerchoice">Computer choice:<span id="computerDisplay"></span></div>
-    <div class="result">Round result:<span id="resultDisplay"></span></div>
-
-    <div class="scoreDisplay">Player score:<span id="playerScoreDisplay"></span></div>
-    <div class="scoreDisplay">Computer score:<span id="computerScoreDisplay"></span></div>
-
-    <div class="winLoose">Game result:<span id="gameResult"></span></div>
-
-    <button id="resetButton">Reset Game</button>
 
     <script src="script.js"></script>
 </body>
