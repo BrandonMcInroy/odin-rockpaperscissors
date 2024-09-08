@@ -1,13 +1,15 @@
-function getComputerChoice() {
-  const computerChoices = ["Rock", "Paper", "Scissors"];
-  const computerChoice =
-    computerChoices[Math.floor(Math.random() * computerChoices.length)];
-  return computerChoice.toLowerCase();
-}
-// console.log(getComputerChoice());
+const choices = ["rock", "paper", "scissors"];
+const playerDisplay = document.getElementById("playerDisplay");
+const computerDisplay = document.getElementById("computerDisplay");
+const resultDisplay = document.getElementById("resultDisplay");
+const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+const computerScorDisplay = document.getElementById("computerScoreDisplay");
+let playerScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice) {
-  const computerChoice = getComputerChoice();
+  const computerChoice = choices[Math.floor(Math.random() * 3)];
+  let result = "";
 
   if (humanChoice === computerChoice) {
     return "It's a tie!";
@@ -30,10 +32,10 @@ function playRound(humanChoice) {
 
 console.log(playRound());
 
-function playGame() {
-  let humanScore = 0;
-  let computerScore = 0;
-}
+// function playGame() {
+//   let humanScore = 0;
+//   let computerScore = 0;
+// }
 
 // playGame();
 
