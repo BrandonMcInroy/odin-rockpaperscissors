@@ -35,8 +35,12 @@ function playRound(playerChoice) {
   } else {
     result = "You lost because you entered an incorrect value.";
   }
-  playerDisplay.textContent = ` ${playerChoice}`;
-  computerDisplay.textContent = ` ${computerChoice}`;
+  playerDisplay.textContent = ` ${playerChoice
+    .charAt(0)
+    .toUpperCase()}${playerChoice.slice(1)}`;
+  computerDisplay.textContent = ` ${computerChoice
+    .charAt(0)
+    .toUpperCase()}${computerChoice.slice(1)}`;
   resultDisplay.textContent = result;
   gameScore(result);
 }
