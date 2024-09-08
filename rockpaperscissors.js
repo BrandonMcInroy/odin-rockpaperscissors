@@ -32,6 +32,16 @@ function playRound(playerChoice) {
   playerDisplay.textContent = `Player: ${playerChoice}`;
   computerDisplay.textContent = `Computer: ${computerChoice}`;
   resultDisplay.textContent = result;
+
+  for (i = 0; i < 5; i++) {
+    if (result.includes("Win")) {
+      playerScore++;
+      playerScoreDisplay.textContent = `Player Score: ${playerScore}`;
+    } else if (result.includes("Lost")) {
+      computerScore++;
+      computerScorDisplay.textContent = `Computer Score: ${computerScore}`;
+    }
+  }
 }
 document.querySelectorAll(".choice").forEach((button) => {
   button.addEventListener("click", () => {
