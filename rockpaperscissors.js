@@ -4,6 +4,7 @@ const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
 const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScorDisplay = document.getElementById("computerScoreDisplay");
+const gameResult = document.getElementById("gameResult");
 let playerScore = 0;
 let computerScore = 0;
 
@@ -29,9 +30,10 @@ function playRound(playerChoice) {
   } else {
     result = "You lost because you entered an incorrect value.";
   }
-  playerDisplay.textContent = `Player: ${playerChoice}`;
-  computerDisplay.textContent = `Computer: ${computerChoice}`;
+  playerDisplay.textContent = `Player choice: ${playerChoice}`;
+  computerDisplay.textContent = `Computer choice: ${computerChoice}`;
   resultDisplay.textContent = result;
+  gameScore(result);
 }
 document.querySelectorAll(".choice").forEach((button) => {
   button.addEventListener("click", () => {
@@ -39,4 +41,29 @@ document.querySelectorAll(".choice").forEach((button) => {
   });
 });
 
-function gameScore(result) {}
+function gameScore(result) {
+  if (result.includes("Win")) {
+    playerScore++;
+    playerScoreDisplay.textContent = `Player score: ${playerScore}`;
+  } else result.includes("Lost");
+  {
+    computerScore++;
+    computerScorDisplay.textContent = `Computer score: ${computerScore}`;
+  }
+
+  if (playerScore === 5) {
+    gameResult.textContent = `You win the game!`;
+  }
+  if (computerScore === 5) {
+    gameResult.textContent = `You lost the game!`;
+  }
+}
+
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreDisplay.textContent = `Player score: ${playerScore}`;
+  computerScorDisplay.textContent = `Computer score: ${computerScore}`;
+  resultDisplay.textContent = "";
+  gameResult.textContent = "";
+}
