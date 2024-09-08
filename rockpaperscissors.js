@@ -1,12 +1,3 @@
-const rock = document.getElementById("rock");
-rock.addEventListener("click", () => playRound({ humanChoice: rock }));
-
-const paper = document.getElementById("paper");
-paper.addEventListener("click", () => playRound({ humanChoice: paper }));
-
-const scissors = document.getElementById("scissors");
-scissors.addEventListener("click", () => playRound({ humanChoice: scissors }));
-
 function getComputerChoice() {
   const computerChoices = ["Rock", "Paper", "Scissors"];
   const computerChoice =
@@ -15,7 +6,7 @@ function getComputerChoice() {
 }
 // console.log(getComputerChoice());
 
-function playRound({ humanChoice }) {
+function playRound(humanChoice) {
   const computerChoice = getComputerChoice();
 
   if (humanChoice === computerChoice) {
@@ -37,13 +28,13 @@ function playRound({ humanChoice }) {
   }
 }
 
-// console.log(playRound(humanChoice, computerChoice));
+console.log(playRound());
 
 function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 }
 
-playGame();
+// playGame();
 
-console.log(playGame());
+// console.log(playGame());
