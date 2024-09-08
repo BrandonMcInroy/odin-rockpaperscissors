@@ -11,6 +11,8 @@ let computerScore = 0;
 
 function playRound(playerChoice) {
   if (!isGameRunning) {
+    resultDisplay.textContent =
+      "The game is over.  Please clicke the Reset button to start a new game.";
     return;
   }
   const computerChoice = choices[Math.floor(Math.random() * 3)];
@@ -40,11 +42,10 @@ function playRound(playerChoice) {
 }
 document.querySelectorAll(".choice").forEach((button) => {
   button.addEventListener("click", () => {
+    if (!isGameRunning) {
+      resetGame();
+    }
     playRound(button.id);
-  });
-  document.getElementById("resetButton").addEventListener("click", () => {
-    isGameRunning = false;
-    resetGame();
   });
 });
 
@@ -60,9 +61,11 @@ function gameScore(result) {
 
   if (playerScore === 5) {
     gameResult.textContent = `You win the game!`;
+    isGameRunning = false;
   }
   if (computerScore === 5) {
     gameResult.textContent = `You lost the game!`;
+    isGameRunning = false;
   }
 }
 
@@ -75,3 +78,6 @@ function resetGame() {
   gameResult.textContent = "";
   isGameRunning = true;
 }
+document.getElementById("resetButton").addEventListener("click", () => {
+  resetGame();
+});
