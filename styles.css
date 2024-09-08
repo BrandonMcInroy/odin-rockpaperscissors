@@ -42,6 +42,10 @@ span {
   margin: 0 10px;
   border-radius: 250px;
   cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.choices button:hover {
+  background-color: #7f92ad;
 }
 
 .display {
