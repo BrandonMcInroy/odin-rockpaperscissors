@@ -12,24 +12,24 @@ function playRound(playerChoice) {
   let result = "";
 
   if (playerChoice === computerChoice) {
-    return "It's a tie!";
+    result = "It's a tie!";
   } else if (playerChoice === "rock" && computerChoice === "scissors") {
-    return "You Win!  Rock crushes Scissors!";
+    result = "You Win!  Rock crushes Scissors!";
   } else if (playerChoice === "scissors" && computerChoice === "paper") {
-    return "You Win!  Scissors cut through Paper!";
+    result = "You Win!  Scissors cut through Paper!";
   } else if (playerChoice === "paper" && computerChoice === "rock") {
-    return "You Win!  Paper covers Rock!";
+    result = "You Win!  Paper covers Rock!";
   } else if (playerChoice === "scissors" && computerChoice === "rock") {
-    return "You Lost! Scissors gets crushed by Rock!";
+    result = "You Lost! Scissors gets crushed by Rock!";
   } else if (playerChoice === "paper" && computerChoice === "scissors") {
-    return "You Lost!  Paper gets cut by Scissors!";
+    result = "You Lost!  Paper gets cut by Scissors!";
   } else if (playerChoice === "rock" && computerChoice === "paper") {
-    return "You Lost!  Rock gets covered by Paper!";
+    result = "You Lost!  Rock gets covered by Paper!";
   } else {
-    return "You lost because you entered an incorrect value.";
+    result = "You lost because you entered an incorrect value.";
   }
 }
-playersole.log(playRound());
+// console.log(playRound());
 
 // function playGame() {
 //   let humanScore = 0;
