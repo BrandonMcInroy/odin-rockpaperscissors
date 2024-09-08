@@ -12,7 +12,7 @@ let computerScore = 0;
 function playRound(playerChoice) {
   if (!isGameRunning) {
     resultDisplay.textContent =
-      "The game is over.  Please clicke the Reset button to start a new game.";
+      "The game is over.  Please click the Reset button to start a new game.";
     return;
   }
   const computerChoice = choices[Math.floor(Math.random() * 3)];
