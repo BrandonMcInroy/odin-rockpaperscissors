@@ -58,8 +58,10 @@ function gameScore(result) {
   if (result.includes("Win")) {
     playerScore++;
     playerScoreDisplay.textContent = ` ${playerScore}`;
-  } else result.includes("Lost");
-  {
+  } else if (result.includes("tie")) {
+    playerScoreDisplay.textContent = ` ${playerScore}`;
+    computerScorDisplay.textContent = ` ${computerScore}`;
+  } else {
     computerScore++;
     computerScorDisplay.textContent = ` ${computerScore}`;
   }
